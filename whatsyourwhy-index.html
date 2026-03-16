@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What's Your Why</title>
+    <meta
+      name="description"
+      content="A simple home base for Dragons & Distractions, ADHD-friendly rituals, and creative tools."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --bg-top: #f8f0e3;
+        --bg-bottom: #d9e6f2;
+        --panel: rgba(255, 252, 247, 0.9);
+        --ink: #1f2430;
+        --muted: #5c6470;
+        --accent: #9b4d2f;
+        --accent-dark: #7a3b21;
+        --border: rgba(31, 36, 48, 0.12);
+        --shadow: 0 24px 60px rgba(31, 36, 48, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top, rgba(255, 255, 255, 0.7), transparent 42%),
+          linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+      }
+
+      main {
+        width: min(720px, calc(100% - 2rem));
+        margin: 0 auto;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 3rem 0;
+      }
+
+      .card {
+        width: 100%;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: clamp(2rem, 4vw, 3.5rem);
+        backdrop-filter: blur(8px);
+      }
+
+      .eyebrow {
+        margin: 0 0 0.75rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 7vw, 4.5rem);
+        line-height: 0.95;
+      }
+
+      p {
+        margin: 1rem 0 0;
+        font-size: 1.08rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: 2rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: #fff7ef;
+      }
+
+      .button-primary:hover,
+      .button-primary:focus-visible {
+        background: var(--accent-dark);
+      }
+
+      .button-secondary {
+        background: transparent;
+        color: var(--ink);
+        border-color: var(--border);
+      }
+
+      .button-secondary:hover,
+      .button-secondary:focus-visible {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .note {
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 640px) {
+        .actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card" aria-labelledby="site-title">
+        <p class="eyebrow">What's Your Why</p>
+        <h1 id="site-title">Dragons, distractions, and a gentler way forward.</h1>
+        <p>
+          This is the home base for a growing collection of ADHD-friendly rituals, monster lore,
+          printable tools, and small supports for messy real life.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="https://whatsyourwhy.github.io/dragons-and-distractions-site/">
+            Enter Dragons &amp; Distractions
+          </a>
+          <a class="button button-secondary" href="https://whatsyourwhy.github.io/dragons-and-distractions-site/choose-your-monster">
+            Choose Your Monster
+          </a>
+        </div>
+        <p class="note">
+          More projects and experiments will live here over time. For now, this page points to the
+          main site.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
